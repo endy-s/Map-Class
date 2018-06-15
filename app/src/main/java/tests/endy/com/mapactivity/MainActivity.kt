@@ -26,6 +26,7 @@ class MainActivity: AppCompatActivity(), OnMapReadyCallback {
         // 3.2. Initialize MapView at onCreate method
         // 3.3. Add OnMapReadyCallback interface at Activity and create onMapReady method
         // 3.4. Update global GoogleMap variable with the received at onMapReady
+        // 3.5. Add lifecycle methods
 
     var map: GoogleMap? = null
 
@@ -39,6 +40,36 @@ class MainActivity: AppCompatActivity(), OnMapReadyCallback {
 
     override fun onMapReady(googleMap: GoogleMap?) {
         map = googleMap
+    }
+
+    override fun onResume() {
+        super.onResume()
+        mapView.onResume()
+    }
+
+    override fun onStart() {
+        super.onStart()
+        mapView.onStart()
+    }
+
+    override fun onStop() {
+        super.onStop()
+        mapView.onStop()
+    }
+
+    override fun onPause() {
+        super.onPause()
+        mapView.onPause()
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        mapView.onDestroy()
+    }
+
+    override fun onLowMemory() {
+        super.onLowMemory()
+        mapView.onLowMemory()
     }
 
 }
