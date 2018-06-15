@@ -25,6 +25,7 @@ class MainActivity: AppCompatActivity(), OnMapReadyCallback {
         // 3.1. Create GoogleMap global variable
         // 3.2. Initialize MapView at onCreate method
         // 3.3. Add OnMapReadyCallback interface at Activity and create onMapReady method
+        // 3.4. Update global GoogleMap variable with the received at onMapReady
 
     var map: GoogleMap? = null
 
@@ -37,6 +38,7 @@ class MainActivity: AppCompatActivity(), OnMapReadyCallback {
     }
 
     override fun onMapReady(googleMap: GoogleMap?) {
+        map = googleMap
     }
 
 }
