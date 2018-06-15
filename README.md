@@ -1,5 +1,5 @@
 # Map Class
-Android Map class for Mão na Massa Project
+Android Map class using Kotlin for Mão na Massa Project
 
 ## Mão na Massa Project
 Mão na Massa is a social project that consists of programming classes for needed young people, aiming to show them how powerful programming is.
