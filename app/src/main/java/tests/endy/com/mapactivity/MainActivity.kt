@@ -20,12 +20,16 @@ class MainActivity: AppCompatActivity() {
 
     // 3. Logic
         // 3.1. Create GoogleMap global variable
+        // 3.2. Initialize MapView at onCreate method
 
     var map: GoogleMap? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_map)
+
+        mapView.onCreate(savedInstanceState)
+        mapView.getMapAsync(this)
     }
 
 }
