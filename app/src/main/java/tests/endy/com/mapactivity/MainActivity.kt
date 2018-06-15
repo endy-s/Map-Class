@@ -43,6 +43,8 @@ class MainActivity: AppCompatActivity(), OnMapReadyCallback {
 
     override fun onMapReady(googleMap: GoogleMap?) {
         map = googleMap
+
+        val florianopolis = LatLng(-27.5969, -48.5495)
     }
 
     override fun onResume() {
