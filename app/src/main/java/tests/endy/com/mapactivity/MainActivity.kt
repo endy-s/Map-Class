@@ -2,6 +2,7 @@ package tests.endy.com.mapactivity
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.model.LatLng
@@ -32,6 +33,7 @@ class MainActivity: AppCompatActivity(), OnMapReadyCallback {
     // 4. Move Map
         // 4.1. Get the coordinates for your city, in my case Florianópolis (or a location you like)
         // 4.2. Set the Map's Zoom Preference
+        // 4.3. Move Map's camera
     var map: GoogleMap? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -47,6 +49,7 @@ class MainActivity: AppCompatActivity(), OnMapReadyCallback {
 
         val florianopolis = LatLng(-27.5969, -48.5495)
         map?.setMinZoomPreference(12f)
+        map?.moveCamera(CameraUpdateFactory.newLatLng(florianopolis))
     }
 
     override fun onResume() {
