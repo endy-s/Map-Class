@@ -13,7 +13,10 @@ class MainActivity: AppCompatActivity() {
         // 1.3. Add to the Manifest the map key info using the meta-data tag
 
     // 2. UI
-        // 2.1 Add the MapView to your layout
+        // 2.1. Add Gradle dependencies
+            // compile 'com.google.android.gms:play-services-maps:15.0.1'
+            // compile 'com.google.android.gms:play-services-location:15.0.1'
+        // 2.2. Add the MapView to your layout
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
