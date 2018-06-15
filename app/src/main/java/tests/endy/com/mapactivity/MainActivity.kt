@@ -18,6 +18,11 @@ class MainActivity: AppCompatActivity() {
             // compile 'com.google.android.gms:play-services-location:15.0.1'
         // 2.2. Add the MapView to your layout
 
+    // 3. Logic
+        // 3.1. Create GoogleMap global variable
+
+    var map: GoogleMap? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_map)
