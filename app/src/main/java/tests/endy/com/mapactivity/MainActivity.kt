@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
+import com.google.android.gms.maps.model.LatLng
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity: AppCompatActivity(), OnMapReadyCallback {
@@ -28,6 +29,8 @@ class MainActivity: AppCompatActivity(), OnMapReadyCallback {
         // 3.4. Update global GoogleMap variable with the received at onMapReady
         // 3.5. Add lifecycle methods
 
+    // 4. Move Map
+        // 4.1. Get the coordinates for your city, in my case Florianópolis (or a location you like)
     var map: GoogleMap? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
