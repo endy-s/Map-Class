@@ -2,8 +2,11 @@ package tests.endy.com.mapactivity
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import com.google.android.gms.maps.GoogleMap
+import com.google.android.gms.maps.OnMapReadyCallback
+import kotlinx.android.synthetic.main.activity_main.*
 
-class MainActivity: AppCompatActivity() {
+class MainActivity: AppCompatActivity(), OnMapReadyCallback {
 
     // -- Map --
 
@@ -21,6 +24,7 @@ class MainActivity: AppCompatActivity() {
     // 3. Logic
         // 3.1. Create GoogleMap global variable
         // 3.2. Initialize MapView at onCreate method
+        // 3.3. Add OnMapReadyCallback interface at Activity and create onMapReady method
 
     var map: GoogleMap? = null
 
@@ -30,6 +34,9 @@ class MainActivity: AppCompatActivity() {
 
         mapView.onCreate(savedInstanceState)
         mapView.getMapAsync(this)
+    }
+
+    override fun onMapReady(googleMap: GoogleMap?) {
     }
 
 }
