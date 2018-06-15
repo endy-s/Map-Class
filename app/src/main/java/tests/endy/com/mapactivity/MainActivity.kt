@@ -31,6 +31,7 @@ class MainActivity: AppCompatActivity(), OnMapReadyCallback {
 
     // 4. Move Map
         // 4.1. Get the coordinates for your city, in my case Florianópolis (or a location you like)
+        // 4.2. Set the Map's Zoom Preference
     var map: GoogleMap? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -45,6 +46,7 @@ class MainActivity: AppCompatActivity(), OnMapReadyCallback {
         map = googleMap
 
         val florianopolis = LatLng(-27.5969, -48.5495)
+        map?.setMinZoomPreference(12f)
     }
 
     override fun onResume() {
