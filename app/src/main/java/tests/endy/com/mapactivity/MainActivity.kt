@@ -40,6 +40,7 @@ class MainActivity: AppCompatActivity(), OnMapReadyCallback {
 
     // 5. Markers
         // 5.1. Add Marker at Florianópolis position (or a location you like)
+        // 5.2. Customize the Marker (adding a title and a snippet, AKA description)
 
     var map: GoogleMap? = null
 
@@ -60,6 +61,7 @@ class MainActivity: AppCompatActivity(), OnMapReadyCallback {
 
         val markerOptions = MarkerOptions()
         markerOptions.position(florianopolis)
+        markerOptions.title("Florianópolis").snippet("Our City!")
         map?.addMarker(markerOptions)
     }
 
