@@ -6,6 +6,7 @@ import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.model.LatLng
+import com.google.android.gms.maps.model.MarkerOptions
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity: AppCompatActivity(), OnMapReadyCallback {
@@ -34,6 +35,13 @@ class MainActivity: AppCompatActivity(), OnMapReadyCallback {
         // 4.1. Get the coordinates for your city, in my case Florianópolis (or a location you like)
         // 4.2. Set the Map's Zoom Preference
         // 4.3. Move Map's camera
+
+    // -- Extras --
+
+    // 5. Markers
+        // 5.1. Add Marker at Florianópolis position (or a location you like)
+        // 5.2. Customize the Marker (adding a title and a snippet, AKA description)
+
     var map: GoogleMap? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -50,6 +58,11 @@ class MainActivity: AppCompatActivity(), OnMapReadyCallback {
         val florianopolis = LatLng(-27.5969, -48.5495)
         map?.setMinZoomPreference(12f)
         map?.moveCamera(CameraUpdateFactory.newLatLng(florianopolis))
+
+        val markerOptions = MarkerOptions()
+        markerOptions.position(florianopolis)
+        markerOptions.title("Florianópolis").snippet("Our City!")
+        map?.addMarker(markerOptions)
     }
 
     override fun onResume() {
